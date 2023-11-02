@@ -1,8 +1,6 @@
-> **Note:** Please follow the [repository conventions](https://github.com/EsriDevEvents/contributor-guides/blob/main/conventions.md#conventions-for-repositories) and [slugify](https://slugify.online/) the title of your repo
+# ArcGIS Maps SDK for JavaScript: Bring in Data from Anywhere
 
-# Name of the session
-
-[Description of the session]
+GeoJSON, CSV, GeoTIFF, and OGC data can easily be brought in as layers with the ArcGIS Maps SDK for JavaScript. In this session, we will build an application that will take advantage of the many capabilities of these layer types.
 
 ## Slides and recording
 

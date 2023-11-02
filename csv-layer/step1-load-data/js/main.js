@@ -13,16 +13,14 @@ require([
 
   const csvLayer = new CSVLayer({
     portalItem: {
-      id: "777a073543994b97bea2521d699dde39",
+      id: "e6eed287d81a409181b008bec06d9164",
       // For use when loading data from an Enterprise Portal
       // portal: {
       //   url: "https://machine-name.domain.com/portal"
       // }
     },
-    copyright: "osm.org",
-    title: "Biergarten",
-    longitudeField: "@lon",
-    latitudeField: "@lat"    
+    copyright: "nuforc.org",
+    title: "NUFORC UFO Sightings"
   });
 
   const map = new Map({

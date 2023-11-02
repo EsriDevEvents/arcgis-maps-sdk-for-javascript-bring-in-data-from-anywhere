@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Step 5: Final App with FeatureTable</title>
 
-  <script src="https://js.arcgis.com/calcite-components/1.0.7/calcite.esm.js" type="module"></script>
-  <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.0.7/calcite.css" />
+  <script src="https://js.arcgis.com/calcite-components/1.10.0/calcite.esm.js" type="module"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.10.0/calcite.css" />
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -20,7 +21,7 @@
   <calcite-loader active></calcite-loader>
   <calcite-shell content-behind hidden>
 
-    <calcite-shell-panel slot="panel-start" detached>
+    <calcite-shell-panel slot="panel-start" display-mode="float">
       <calcite-action-bar slot="action-bar">
         <calcite-action data-action-id="layers" icon="layers" text="Layers"></calcite-action>
         <calcite-action data-action-id="legend" icon="legend" text="Legend"></calcite-action>
@@ -32,6 +33,7 @@
       <calcite-panel heading="Layers" height-scale="l" data-panel-id="layers" hidden>
         <div id="layers-container"></div>
       </calcite-panel>
+      
       <calcite-panel heading="Legend" height-scale="l" data-panel-id="legend" hidden>
         <div id="legend-container"></div>
       </calcite-panel>

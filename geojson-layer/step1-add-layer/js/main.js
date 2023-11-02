@@ -6,32 +6,30 @@ require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/SceneView"], (
 	GeoJSONLayer,
 	SceneView
 ) => {
-	const backCountry =
-		"https://lboyd93.github.io/DevSummit-Presentations/2023/data-from-anywhere/data/geojson/GRSM_BACKCOUNTRY_CAMPSITES.geojson";
-	const parkBoundary =
-		"https://lboyd93.github.io/DevSummit-Presentations/2023/data-from-anywhere/data/geojson/GRSM_BOUNDARYPOLY.geojson";
+	const alps = "../../data/geojson/salzburg.json";
+	const alpineHut = "../../data/geojson/alpine-hut-salzburg.json";
 
 	// Create GeoJSONLayer from GeoJSON data
 	const trailsLayer = new GeoJSONLayer({
 		portalItem: {
-			id: "5ccdbe2338984effb5e81b0c199df646",
+			id: "7ea8f2ec516b4207b6fb1ba5d8ec7f3d",
 		},
-		copyright: "NPS",
+		copyright: "OpenStreetMap",
 		title: "Trails",
 	});
 
 	// Create GeoJSONLayer from GeoJSON data
 	const backCountryLayer = new GeoJSONLayer({
-		url: backCountry,
-		copyright: "NPS",
-		title: "Campsites",
+		url: alpineHut,
+		copyright: "OpenStreetMap",
+		title: "Alpine Huts",
 	});
 
 	// Create GeoJSONLayer from GeoJSON data
 	const boundaryLayer = new GeoJSONLayer({
-		url: parkBoundary,
-		copyright: "NPS",
-		title: "Park Boundary",
+		url: alps,
+		copyright: "OpenStreetMap",
+		title: "Alps Boundary",
 		popupEnabled: false,
 	});
 
@@ -49,9 +47,9 @@ require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/SceneView"], (
 		},
 		// Set the camera angle
 		camera: {
-			position: [-83.63075093329783, 35.330167678495506, 4415.732696997933],
-			tilt: 81.69077947429918,
-			heading: 29.83651654634004,
+			position: [13, 46.5, 45000],
+			tilt: 65,
+			heading: 0,
 		},
 		environment: {
 			weather: {

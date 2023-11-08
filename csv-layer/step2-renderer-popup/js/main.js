@@ -31,7 +31,7 @@ require([
       {
         type: "text",
         text: `A <b><span style="color: #39AB17">{Shape}</span></b> shaped UFO was spotted on {Date_Time} in <b>{CITY}</b>.
-        <h4>Description of Sighting:</h4><i>"{Summary}"</i>`
+        <h4>Description of Sighting:</h4><i>"{Comments}"</i>`
       }
     ]
   }

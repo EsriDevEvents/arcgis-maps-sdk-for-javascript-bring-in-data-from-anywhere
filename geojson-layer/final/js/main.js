@@ -8,6 +8,7 @@ require([
 	"esri/widgets/Legend",
 	"esri/widgets/ElevationProfile",
 	"esri/widgets/Expand",
+	"esri/widgets/Search",
 	"esri/popup/content/TextContent",
 ], (
 	Map,
@@ -16,6 +17,7 @@ require([
 	Legend,
 	ElevationProfile,
 	Expand,
+	Search,
 	TextContent
 ) => {
 	const alps = "../../data/geojson/salzburg.json";
@@ -1583,6 +1585,24 @@ require([
 		view,
 		content: new Legend({ view }),
 	});
+
+	const searchWidget = new Search({
+		view: view,
+		sources: [{
+			layer: backCountryLayer,
+			placeholder: "Search alpine hut",
+			name: "Alpine huts",
+			prefix: "",
+			suffix: "",
+			maxResults: 1,
+			maxSuggestions: 6,
+			exactMatch: false,
+			searchFields: ["name"],
+			displayField: "name",
+			minSuggestCharacters: 0
+		  }]
+	  });
+	view.ui.add(searchWidget, {position: "top-right"});
 
 	// Add widgets to the UI
 	view.ui.add(elevationExpand, "top-right");
